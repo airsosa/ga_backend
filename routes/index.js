@@ -4,7 +4,7 @@ const router = require('express').Router();
 
 router.route('/').get((req, res) => {
     let data = [
-	{'title': 'Promoting the Growth We Want',
+	{'title': 'Promoting the Growth We Need',
 	 'body': 'Bla Bla Bla',
 	 'images': [null, null, null]
 	},
