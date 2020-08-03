@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const contentSchema = new Schema({
-    title: {type: String, required: ture},
+    title: {type: String, required: true},
     summary: String,
     body: String,
     type: String,
@@ -13,10 +13,10 @@ const contentSchema = new Schema({
     image: String,
     user: { type: 'ObjectId', ref: 'User', default: null },
     meta: {
-        published: Boolean,
+        published: {type: Boolean, default: true },
     },
 }, {timestamps: { createdAt: 'created' , updatedAt: 'updated'}});
 
 const Content = mongoose.model('Content', contentSchema);
 
-module.export = Content;
+module.exports = Content;
